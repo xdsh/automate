@@ -2,12 +2,15 @@
 
 cd ~
 curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
-readline -n "Now you should inspect the source for verification. Press a key"
+
+echo "Now you should inspect the source for verification. Press a key"
+read -r 
 nano nodesource_setup.sh
-readline -n "Next step you will need to enter your sudo password. Press a key"
+echo "Next step you will need to enter your sudo password. Press a key"
+read -n 
 
 sudo bash nodesource_setup.sh
 sudo apt install nodejs
 
-readline -n "Complete! Press a key to view NodeJS version."
+echo "Complete! If you can see NodeJS version below, everything is GOOD!"
 nodejs -v
